@@ -11,7 +11,7 @@ namespace FirstObOpgUnit
         public int Id { get; set; }
         public string Model { get; set; }
         public int Price { get; set; }
-        public int License { get; set; }
+        public string License { get; set; }
 
         public override string ToString()
         {
@@ -40,9 +40,9 @@ namespace FirstObOpgUnit
 
         public void ValidateLicense()
         {
-            if (License < 2 || License > 7)
+            if (License?.Length < 2 || License?.Length > 7)
             {
-                throw new ArgumentOutOfRangeException("License is not right.");
+                throw new ArgumentException("License is not right.");
             }
         }
 
