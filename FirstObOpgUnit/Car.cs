@@ -24,7 +24,7 @@ namespace FirstObOpgUnit
             {
                 throw new ArgumentNullException("Model is null.");
             }
-            if (Model.Length >= 4)
+            if (Model.Length < 4)
             {
                 throw new ArgumentException("Model is empty or too long.");
             }
@@ -32,7 +32,7 @@ namespace FirstObOpgUnit
 
         public void ValidatePrice()
         {
-            if (Price <= 0)
+            if (Price < 0)
             {
                 throw new ArgumentOutOfRangeException("Price is negative.");
             }

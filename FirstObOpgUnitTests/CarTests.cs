@@ -11,18 +11,18 @@ namespace FirstObOpgUnit.Tests
     [TestClass()]
     public class CarTests
     {
-        Car car = new Car() { Id = 1, Model = "BMW", Price = 100, License = "BHMSKSU" };
+        Car car = new Car() { Id = 1, Model = "Mustang", Price = 100, License = "BHMSKSU" };
         Car carModelNull = new Car() { Id = 1, Model = null, Price = 100, License = "USDHCJSU" };
-        Car carModelTooLong = new Car() { Id = 1, Model = "Mustang", Price = 100, License = "DJVHSHSU" };
-        Car carPriceIsNegative = new Car() { Id = 1, Model = "BMW", Price = -1, License = "HDUDHCYD" };
-        Car carLicenseNotLongEnough = new Car() { Id = 1, Model = "BMW", Price = 100, License = "D" };
-        Car carLicenseTooLong = new Car() { Id = 1, Model = "BMW", Price = 100, License = "DHVHSYSH" };
+        Car carModelTooLong = new Car() { Id = 1, Model = "BMW", Price = 100, License = "DJVHSHSU" };
+        Car carPriceIsNegative = new Car() { Id = 1, Model = "Mustang", Price = -1, License = "HDUDHCYD" };
+        Car carLicenseNotLongEnough = new Car() { Id = 1, Model = "Mustang", Price = 100, License = "D" };
+        Car carLicenseTooLong = new Car() { Id = 1, Model = "Mustang", Price = 100, License = "DHVHSYSH" };
 
         [TestMethod()]
         public void ToStringTest()
         {
             string ca = car.ToString();
-            Assert.AreEqual(ca, "1, BMW, 100, BHMSKSU");
+            Assert.AreEqual(ca, "1, Mustang, 100, BHMSKSU");
         }
 
         [TestMethod()]
